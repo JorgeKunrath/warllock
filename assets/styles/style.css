@@ -31,458 +31,68 @@ img {
 /* VARIÁVEIS */
 /* TEMPORÁRIO */
 body {
-  margin-bottom: 50vh;
+  background-color: #1e3f70;
+  padding-bottom: 50vh;
+}
+
+.wrapper {
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero {
-  background-color: orange;
-  background-image: linear-gradient(130deg, orange, orangered);
-  padding-bottom: 10vh;
-  padding-top: 1px;
+  text-align: center;
 }
 
 .hero__name {
   font-family: "Abril Fatface", cursive;
   font-size: 10vw;
-  text-align: center;
-  color: white;
+  color: #ffb833;
   position: relative;
-  z-index: 2;
-  margin-top: 0.5em;
+  z-index: 1;
 }
 
-.hero__image {
-  max-width: 80%;
-  max-height: 60vh;
-  margin: 0 auto;
-  margin-top: calc(-5vw - 20px);
+.hero img {
+  margin-left: auto;
+  margin-right: auto;
+  max-height: 70vh;
+  margin-top: -10vmin;
 }
 
 .hero__player {
-  display: block;
-  width: 90%;
-  max-width: 1000px;
+  width: 100%;
   height: 80px;
-  margin: 0 auto;
-  margin-top: -5px;
 }
 
-.hero .glitch {
+.movieclip {
+  padding: 5rem 0;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 2px solid blue;
+}
+
+.movieclip h2 {
+  font-size: 2rem;
+  color: #ffb833;
+}
+
+.movieclip__flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.movieclip a {
   color: white;
-  position: relative;
-}
-
-.hero .glitch:before {
-  content: attr(data-text);
-  position: absolute;
-  left: calc(50.5% + 3px);
-  height: 200px;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  top: 0;
-  color: white;
-  background-color: white;
-  text-shadow: 0.5vw 0.5vw orangered, 1px 0 orangered;
-  overflow: hidden;
-  animation: noise-anim 7s infinite ease alternate-reverse;
-}
-
-.hero .glitch:after {
-  content: attr(data-text);
-  position: absolute;
-  left: calc(49.5% + 3px);
-  height: 200px;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  top: 0;
-  color: white;
-  background-color: white;
-  text-shadow: 0.5vw 0.5vw orangered, -1px 0 orangered;
-  overflow: hidden;
-  animation: noise-anim-2 5s infinite ease alternate-reverse;
-}
-
-@-webkit-keyframes noise-anim {
-  0% {
-    clip: rect(6vw, 100vw, 8vw, 0);
-  }
-  3.33333% {
-    clip: rect(4vw, 100vw, 11vw, 0);
-  }
-  6.66667% {
-    clip: rect(6vw, 100vw, 9vw, 0);
-  }
-  10% {
-    clip: rect(2vw, 100vw, 5vw, 0);
-  }
-  13.33333% {
-    clip: rect(5vw, 100vw, 3vw, 0);
-  }
-  16.66667% {
-    clip: rect(1vw, 100vw, 8vw, 0);
-  }
-  20% {
-    clip: rect(3vw, 100vw, 9vw, 0);
-  }
-  23.33333% {
-    clip: rect(5vw, 100vw, 1vw, 0);
-  }
-  26.66667% {
-    clip: rect(6vw, 100vw, 5vw, 0);
-  }
-  30% {
-    clip: rect(1vw, 100vw, 1vw, 0);
-  }
-  33.33333% {
-    clip: rect(3vw, 100vw, 9vw, 0);
-  }
-  36.66667% {
-    clip: rect(6vw, 100vw, 9vw, 0);
-  }
-  40% {
-    clip: rect(1vw, 100vw, 8vw, 0);
-  }
-  43.33333% {
-    clip: rect(2vw, 100vw, 7vw, 0);
-  }
-  46.66667% {
-    clip: rect(4vw, 100vw, 10vw, 0);
-  }
-  50% {
-    clip: rect(2vw, 100vw, 3vw, 0);
-  }
-  53.33333% {
-    clip: rect(3vw, 100vw, 10vw, 0);
-  }
-  56.66667% {
-    clip: rect(1vw, 100vw, 10vw, 0);
-  }
-  60% {
-    clip: rect(5vw, 100vw, 8vw, 0);
-  }
-  63.33333% {
-    clip: rect(1vw, 100vw, 7vw, 0);
-  }
-  66.66667% {
-    clip: rect(5vw, 100vw, 10vw, 0);
-  }
-  70% {
-    clip: rect(5vw, 100vw, 11vw, 0);
-  }
-  73.33333% {
-    clip: rect(6vw, 100vw, 1vw, 0);
-  }
-  76.66667% {
-    clip: rect(2vw, 100vw, 12vw, 0);
-  }
-  80% {
-    clip: rect(5vw, 100vw, 5vw, 0);
-  }
-  83.33333% {
-    clip: rect(1vw, 100vw, 12vw, 0);
-  }
-  86.66667% {
-    clip: rect(4vw, 100vw, 8vw, 0);
-  }
-  90% {
-    clip: rect(5vw, 100vw, 12vw, 0);
-  }
-  93.33333% {
-    clip: rect(5vw, 100vw, 12vw, 0);
-  }
-  96.66667% {
-    clip: rect(1vw, 100vw, 6vw, 0);
-  }
-  100% {
-    clip: rect(5vw, 100vw, 5vw, 0);
-  }
-}
-
-@keyframes noise-anim {
-  0% {
-    clip: rect(6vw, 100vw, 8vw, 0);
-  }
-  3.33333% {
-    clip: rect(4vw, 100vw, 11vw, 0);
-  }
-  6.66667% {
-    clip: rect(6vw, 100vw, 9vw, 0);
-  }
-  10% {
-    clip: rect(2vw, 100vw, 5vw, 0);
-  }
-  13.33333% {
-    clip: rect(5vw, 100vw, 3vw, 0);
-  }
-  16.66667% {
-    clip: rect(1vw, 100vw, 8vw, 0);
-  }
-  20% {
-    clip: rect(3vw, 100vw, 9vw, 0);
-  }
-  23.33333% {
-    clip: rect(5vw, 100vw, 1vw, 0);
-  }
-  26.66667% {
-    clip: rect(6vw, 100vw, 5vw, 0);
-  }
-  30% {
-    clip: rect(1vw, 100vw, 1vw, 0);
-  }
-  33.33333% {
-    clip: rect(3vw, 100vw, 9vw, 0);
-  }
-  36.66667% {
-    clip: rect(6vw, 100vw, 9vw, 0);
-  }
-  40% {
-    clip: rect(1vw, 100vw, 8vw, 0);
-  }
-  43.33333% {
-    clip: rect(2vw, 100vw, 7vw, 0);
-  }
-  46.66667% {
-    clip: rect(4vw, 100vw, 10vw, 0);
-  }
-  50% {
-    clip: rect(2vw, 100vw, 3vw, 0);
-  }
-  53.33333% {
-    clip: rect(3vw, 100vw, 10vw, 0);
-  }
-  56.66667% {
-    clip: rect(1vw, 100vw, 10vw, 0);
-  }
-  60% {
-    clip: rect(5vw, 100vw, 8vw, 0);
-  }
-  63.33333% {
-    clip: rect(1vw, 100vw, 7vw, 0);
-  }
-  66.66667% {
-    clip: rect(5vw, 100vw, 10vw, 0);
-  }
-  70% {
-    clip: rect(5vw, 100vw, 11vw, 0);
-  }
-  73.33333% {
-    clip: rect(6vw, 100vw, 1vw, 0);
-  }
-  76.66667% {
-    clip: rect(2vw, 100vw, 12vw, 0);
-  }
-  80% {
-    clip: rect(5vw, 100vw, 5vw, 0);
-  }
-  83.33333% {
-    clip: rect(1vw, 100vw, 12vw, 0);
-  }
-  86.66667% {
-    clip: rect(4vw, 100vw, 8vw, 0);
-  }
-  90% {
-    clip: rect(5vw, 100vw, 12vw, 0);
-  }
-  93.33333% {
-    clip: rect(5vw, 100vw, 12vw, 0);
-  }
-  96.66667% {
-    clip: rect(1vw, 100vw, 6vw, 0);
-  }
-  100% {
-    clip: rect(5vw, 100vw, 5vw, 0);
-  }
-}
-
-@-webkit-keyframes noise-anim-2 {
-  0% {
-    clip: rect(1vw, 100vw, 2vw, 0);
-  }
-  3.33333% {
-    clip: rect(3vw, 100vw, 11vw, 0);
-  }
-  6.66667% {
-    clip: rect(1vw, 100vw, 10vw, 0);
-  }
-  10% {
-    clip: rect(5vw, 100vw, 1vw, 0);
-  }
-  13.33333% {
-    clip: rect(5vw, 100vw, 4vw, 0);
-  }
-  16.66667% {
-    clip: rect(4vw, 100vw, 7vw, 0);
-  }
-  20% {
-    clip: rect(4vw, 100vw, 6vw, 0);
-  }
-  23.33333% {
-    clip: rect(4vw, 100vw, 5vw, 0);
-  }
-  26.66667% {
-    clip: rect(3vw, 100vw, 9vw, 0);
-  }
-  30% {
-    clip: rect(5vw, 100vw, 4vw, 0);
-  }
-  33.33333% {
-    clip: rect(2vw, 100vw, 3vw, 0);
-  }
-  36.66667% {
-    clip: rect(3vw, 100vw, 12vw, 0);
-  }
-  40% {
-    clip: rect(5vw, 100vw, 2vw, 0);
-  }
-  43.33333% {
-    clip: rect(4vw, 100vw, 10vw, 0);
-  }
-  46.66667% {
-    clip: rect(4vw, 100vw, 10vw, 0);
-  }
-  50% {
-    clip: rect(4vw, 100vw, 3vw, 0);
-  }
-  53.33333% {
-    clip: rect(1vw, 100vw, 3vw, 0);
-  }
-  56.66667% {
-    clip: rect(3vw, 100vw, 3vw, 0);
-  }
-  60% {
-    clip: rect(5vw, 100vw, 4vw, 0);
-  }
-  63.33333% {
-    clip: rect(4vw, 100vw, 11vw, 0);
-  }
-  66.66667% {
-    clip: rect(3vw, 100vw, 4vw, 0);
-  }
-  70% {
-    clip: rect(5vw, 100vw, 2vw, 0);
-  }
-  73.33333% {
-    clip: rect(5vw, 100vw, 12vw, 0);
-  }
-  76.66667% {
-    clip: rect(2vw, 100vw, 7vw, 0);
-  }
-  80% {
-    clip: rect(5vw, 100vw, 11vw, 0);
-  }
-  83.33333% {
-    clip: rect(3vw, 100vw, 5vw, 0);
-  }
-  86.66667% {
-    clip: rect(1vw, 100vw, 9vw, 0);
-  }
-  90% {
-    clip: rect(4vw, 100vw, 2vw, 0);
-  }
-  93.33333% {
-    clip: rect(6vw, 100vw, 6vw, 0);
-  }
-  96.66667% {
-    clip: rect(5vw, 100vw, 7vw, 0);
-  }
-  100% {
-    clip: rect(2vw, 100vw, 7vw, 0);
-  }
-}
-
-@keyframes noise-anim-2 {
-  0% {
-    clip: rect(1vw, 100vw, 2vw, 0);
-  }
-  3.33333% {
-    clip: rect(3vw, 100vw, 11vw, 0);
-  }
-  6.66667% {
-    clip: rect(1vw, 100vw, 10vw, 0);
-  }
-  10% {
-    clip: rect(5vw, 100vw, 1vw, 0);
-  }
-  13.33333% {
-    clip: rect(5vw, 100vw, 4vw, 0);
-  }
-  16.66667% {
-    clip: rect(4vw, 100vw, 7vw, 0);
-  }
-  20% {
-    clip: rect(4vw, 100vw, 6vw, 0);
-  }
-  23.33333% {
-    clip: rect(4vw, 100vw, 5vw, 0);
-  }
-  26.66667% {
-    clip: rect(3vw, 100vw, 9vw, 0);
-  }
-  30% {
-    clip: rect(5vw, 100vw, 4vw, 0);
-  }
-  33.33333% {
-    clip: rect(2vw, 100vw, 3vw, 0);
-  }
-  36.66667% {
-    clip: rect(3vw, 100vw, 12vw, 0);
-  }
-  40% {
-    clip: rect(5vw, 100vw, 2vw, 0);
-  }
-  43.33333% {
-    clip: rect(4vw, 100vw, 10vw, 0);
-  }
-  46.66667% {
-    clip: rect(4vw, 100vw, 10vw, 0);
-  }
-  50% {
-    clip: rect(4vw, 100vw, 3vw, 0);
-  }
-  53.33333% {
-    clip: rect(1vw, 100vw, 3vw, 0);
-  }
-  56.66667% {
-    clip: rect(3vw, 100vw, 3vw, 0);
-  }
-  60% {
-    clip: rect(5vw, 100vw, 4vw, 0);
-  }
-  63.33333% {
-    clip: rect(4vw, 100vw, 11vw, 0);
-  }
-  66.66667% {
-    clip: rect(3vw, 100vw, 4vw, 0);
-  }
-  70% {
-    clip: rect(5vw, 100vw, 2vw, 0);
-  }
-  73.33333% {
-    clip: rect(5vw, 100vw, 12vw, 0);
-  }
-  76.66667% {
-    clip: rect(2vw, 100vw, 7vw, 0);
-  }
-  80% {
-    clip: rect(5vw, 100vw, 11vw, 0);
-  }
-  83.33333% {
-    clip: rect(3vw, 100vw, 5vw, 0);
-  }
-  86.66667% {
-    clip: rect(1vw, 100vw, 9vw, 0);
-  }
-  90% {
-    clip: rect(4vw, 100vw, 2vw, 0);
-  }
-  93.33333% {
-    clip: rect(6vw, 100vw, 6vw, 0);
-  }
-  96.66667% {
-    clip: rect(5vw, 100vw, 7vw, 0);
-  }
-  100% {
-    clip: rect(2vw, 100vw, 7vw, 0);
-  }
+  display: block;
 }
 /*# sourceMappingURL=style.css.map */

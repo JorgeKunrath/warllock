@@ -6,4 +6,4 @@
 gerador de sites https://www.11ty.dev/
 
 primeiro `npm install` né...
-comando de desenvolvimento local: `eleventy --serve`
+comando de desenvolvimento local: `npx eleventy --serve`
