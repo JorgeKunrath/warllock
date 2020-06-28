@@ -11,5 +11,8 @@
   "license": "ISC",
   "devDependencies": {
     "@11ty/eleventy": "^0.10.0"
+  },
+  "dependencies": {
+    "rellax": "^1.12.1"
   }
 }

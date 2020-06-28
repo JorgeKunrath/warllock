@@ -3,6 +3,9 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addWatchTarget("./assets/styles/");
   eleventyConfig.addPassthroughCopy("./assets/styles/style.css");
 
+  eleventyConfig.addWatchTarget("./assets/js/");
+  eleventyConfig.addPassthroughCopy("./assets/js/parallax.js");
+
 
   return {
     PassthroughFileCopy: true
