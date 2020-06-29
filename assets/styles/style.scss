@@ -27,17 +27,9 @@ img {
 }
 
 
-
-
-// ==================================
-/* TIPOGRAPHY */ 
-// ==================================
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
-
 // ==================================
 /* VARIÁVEIS */ 
 // ==================================
-$display: 'Abril Fatface', cursive;
 
 
 $cor_main: #ffb833;
@@ -46,12 +38,35 @@ $cor_bg: #1e3f70;
 
 
 
+
+
+// ==================================
+/* TIPOGRAPHY */ 
+// ==================================
+// @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Overpass:ital,wght@0,200;0,400;0,700;1,200;1,300;1,700&display=swap');
+// font-family: 'Abril Fatface', cursive;
+// font-family: 'Overpass', sans-serif;
+
+$display: 'Abril Fatface', cursive;
+$body: 'Overpass', sans-serif;
+
+* {
+  font-family: $body;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $display;
+}
+
+
+
 // ==================================
 /* TEMPORÁRIO */ 
 // ==================================
 body {
   background-color: $cor_bg;
-  padding-bottom: 50vh;
+  // padding-bottom: 100vh;
 }
 
 .wrapper {
@@ -65,26 +80,40 @@ body {
 
 .hero {
   text-align: center;
+  // border: 2px solid red;
+  position: relative;
+  overflow: hidden;
 
   &__name {
-    font-family: $display;
-    font-size: 10vw;
-    color: $cor_main;
-    position: relative;
-    margin-top: 5vh;
+    position: absolute;
+    top: 5vh;
+    left: 0;
+    right: 0;
     z-index: 1;
+    
+    h1 {
+      font-family: $display;
+      font-size: calc(2rem + 5vw);
+      color: $cor_main;
+    }
   }
 
   img {
+    position: relative;
     margin-left: auto;
     margin-right: auto;
     max-height: 70vh;
-    margin-top: -10vmin;
+    margin-top: 15vh;
+    top: 10px;
   }
 
   &__player {
+    position: relative;
+    z-index: 2;
     width: 100%;
+    max-width: 1200px;
     height: 80px;
+    top: 7px;
   }
 }
 
@@ -95,7 +124,7 @@ body {
   height: 100vh;
   display: flex;
   align-items: center;
-  border: 2px solid blue;
+  // border: 2px solid blue;
 
   h2 {
     font-size: 2rem;
@@ -107,10 +136,115 @@ body {
     align-items: center;
   }
 
-  a {
-    color: white;
-    display: block;
+  &__actions {
+    display: flex;
+    align-items: flex-start;
+
+    img {
+      width: 30px;
+      height: 30px;
+      object-fit: contain;
+      margin-left: 1rem;
+      mix-blend-mode: multiply;
+      margin-top: 1rem;
+    }
   }
+
+  .action {
+
+    &__subscribe {
+      margin-right: auto;
+      padding: 0.5rem 1rem;
+      background-color: #ff3333;
+      border-radius: 5px;
+      text-decoration: none;
+      margin-top: 1rem;
+      color: white;
+    }
+
+    &__share-icon {}
+    &__twitter {}
+    &__facebook {}
+  }
+
 }
 
 
+
+
+
+.bio {
+  // border: 2px solid pink;
+  padding: 10vh 0;
+  // overflow: hidden;
+
+  &__container {
+    display: flex;
+    align-items: center;
+  }
+
+  &__images {
+    width: 50%;
+    margin-right: 5%;
+    // border: 5px solid red;
+    position: relative;
+
+    min-height: 80vh;
+
+    // display: grid;
+    // grid-template-columns: repeat(4, 1fr);
+    // grid-template-rows: repeat(4, 200px);
+  }
+  &__image1,
+  &__image2,
+  &__image3 {
+    position: absolute;
+    width: 100%;
+    object-fit: cover;
+
+    box-shadow: 0 0 55px -5px rgba(0, 0, 0, 0.5);
+  }
+
+  &__image1 {
+    top: 0;
+    left: 0;
+    height: 50%;
+    width: 50%;
+  }
+  &__image2 {
+    top: 30%;
+    left: 10%;
+    width: 90%;
+  }
+  &__image3 {
+    top: 55%;
+    left: -15%;
+    height: 45%;
+    width: 70%;
+  }
+
+  &__infos {
+    // border: 5px solid green;
+    width: 50%;
+    color: $cor_main;
+
+    h3 {
+      font-size: 3rem;
+      margin-bottom: 2rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+
+    a {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      // border-radius: 5px;
+      background-color: $cor_main;
+      color: $cor_bg;
+      text-decoration: none;
+      margin-top: 1rem;
+    }
+  }
+}

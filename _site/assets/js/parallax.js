@@ -46,6 +46,7 @@ a.destroy=function(){for(var f=0;f<a.elems.length;f++)a.elems[f].style.cssText=d
 
 // comentado == default
 var rellax = new Rellax('.rellax', {
+  breakpoints:[576, 768, 1201]
     // speed: -2,
     // center: false,
     // wrapper: null,

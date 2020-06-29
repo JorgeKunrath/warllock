@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* BASIC RESET */
-@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Overpass:ital,wght@0,200;0,400;0,700;1,200;1,300;1,700&display=swap");
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -27,12 +27,19 @@ img {
   list-style: none;
 }
 
-/* TIPOGRAPHY */
 /* VARIÁVEIS */
+/* TIPOGRAPHY */
+* {
+  font-family: "Overpass", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Abril Fatface", cursive;
+}
+
 /* TEMPORÁRIO */
 body {
   background-color: #1e3f70;
-  padding-bottom: 50vh;
 }
 
 .wrapper {
@@ -43,27 +50,40 @@ body {
 
 .hero {
   text-align: center;
+  position: relative;
+  overflow: hidden;
 }
 
 .hero__name {
-  font-family: "Abril Fatface", cursive;
-  font-size: 10vw;
-  color: #ffb833;
-  position: relative;
-  margin-top: 5vh;
+  position: absolute;
+  top: 5vh;
+  left: 0;
+  right: 0;
   z-index: 1;
 }
 
+.hero__name h1 {
+  font-family: "Abril Fatface", cursive;
+  font-size: calc(2rem + 5vw);
+  color: #ffb833;
+}
+
 .hero img {
+  position: relative;
   margin-left: auto;
   margin-right: auto;
   max-height: 70vh;
-  margin-top: -10vmin;
+  margin-top: 15vh;
+  top: 10px;
 }
 
 .hero__player {
+  position: relative;
+  z-index: 2;
   width: 100%;
+  max-width: 1200px;
   height: 80px;
+  top: 7px;
 }
 
 .movieclip {
@@ -75,7 +95,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: 2px solid blue;
 }
 
 .movieclip h2 {
@@ -92,8 +111,104 @@ body {
           align-items: center;
 }
 
-.movieclip a {
+.movieclip__actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.movieclip__actions img {
+  width: 30px;
+  height: 30px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin-left: 1rem;
+  mix-blend-mode: multiply;
+  margin-top: 1rem;
+}
+
+.movieclip .action__subscribe {
+  margin-right: auto;
+  padding: 0.5rem 1rem;
+  background-color: #ff3333;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 1rem;
   color: white;
-  display: block;
+}
+
+.bio {
+  padding: 10vh 0;
+}
+
+.bio__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.bio__images {
+  width: 50%;
+  margin-right: 5%;
+  position: relative;
+  min-height: 80vh;
+}
+
+.bio__image1, .bio__image2, .bio__image3 {
+  position: absolute;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-box-shadow: 0 0 55px -5px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 55px -5px rgba(0, 0, 0, 0.5);
+}
+
+.bio__image1 {
+  top: 0;
+  left: 0;
+  height: 50%;
+  width: 50%;
+}
+
+.bio__image2 {
+  top: 30%;
+  left: 10%;
+  width: 90%;
+}
+
+.bio__image3 {
+  top: 55%;
+  left: -15%;
+  height: 45%;
+  width: 70%;
+}
+
+.bio__infos {
+  width: 50%;
+  color: #ffb833;
+}
+
+.bio__infos h3 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.bio__infos p {
+  margin-bottom: 1rem;
+}
+
+.bio__infos a {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #ffb833;
+  color: #1e3f70;
+  text-decoration: none;
+  margin-top: 1rem;
 }
 /*# sourceMappingURL=style.css.map */
