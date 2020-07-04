@@ -37,7 +37,7 @@ $cor_bg: #1e3f70;
 // $shade: rgba(0,0,0,0.2);
 
 
-
+$radius: 3px;
 
 
 // ==================================
@@ -70,7 +70,8 @@ body {
 }
 
 .wrapper {
-  max-width: 80%;
+  width: 80%;
+  max-width: 1500px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -200,23 +201,37 @@ body {
   &__image3 {
     position: absolute;
     width: 100%;
-    object-fit: cover;
 
+    // border: 3px solid red;
+    border-radius: $radius;
+    overflow: hidden;
     box-shadow: 0 0 55px -5px rgba(0, 0, 0, 0.5);
+    
+    img {
+      // min-width: 100%;
+      max-width: unset;
+      width: auto;
+      min-height: 200%;
+      max-height: 200%;
+    }
   }
 
   &__image1 {
+    z-index: 1;
     top: 0;
     left: 0;
     height: 50%;
     width: 50%;
   }
   &__image2 {
+    z-index: 2;
     top: 30%;
-    left: 10%;
-    width: 90%;
+    left: 30%;
+    height: 40%;
+    width: 70%;
   }
   &__image3 {
+    z-index: 1;
     top: 55%;
     left: -15%;
     height: 45%;
@@ -240,11 +255,106 @@ body {
     a {
       display: inline-block;
       padding: 0.5rem 1rem;
-      // border-radius: 5px;
+      border-radius: $radius;
       background-color: $cor_main;
       color: $cor_bg;
       text-decoration: none;
       margin-top: 1rem;
+      transition: all 0.2s ease;
+      border: 2px solid $cor_main;
+
+      &:hover {
+        transform: scale(1.05);
+      }
     }
+    a:not(:first-of-type) {
+      margin-left: 10px;
+      // box-shadow: inset 0 0 0 2px $cor_main;
+      background: none;
+      color: $cor_main;
+    }
+  }
+}
+
+
+.social {
+
+
+  &__infos {
+    // margin-top: -100px;
+    margin-left: 52.5%;
+    color: $cor_main;
+  }
+
+  h3 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+
+
+  &__streaming, &__media {
+    display: flex;
+    a {
+      margin-right: 20px;
+      margin-bottom: 20px;
+    }
+    img {
+      max-width: 80px;
+      border-radius: 1000px;
+    }
+  }
+}
+
+
+
+
+.contact {
+  text-align: center;
+  color: $cor_main;
+  font-size: calc(1rem + 1vw);
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+
+
+
+.footer {
+
+  padding-top: 10vh;
+  border-bottom: 10px solid $cor_main;
+
+  &__nav {
+    display: flex;
+    flex-flow: column;
+  }
+
+  &__link {
+    color: $cor_main;
+    font-size: calc(1.5rem + 0.5vw);
+    padding: 0.25em 0;
+    transition: all 0.3s ease;
+
+    &:focus, &:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: $radius;
+      padding-left: 1rem;
+    }
+  }
+
+  .by-me {
+    display: block;
+    color: white;
+    opacity: 0.5;
+    margin-top: 10vh;
+    margin-bottom: 1em;
+    transition: opacity 0.3s ease;
+    &:hover {
+      opacity: 1;
+    }
+    a {
+      color: $cor_main;
+    } 
   }
 }
